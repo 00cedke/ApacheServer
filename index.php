@@ -1,3 +1,7 @@
+<?php
+  $GetUserIP = $_SERVER['REMOTE_ADDR'];
+?>
+
 <html>
   <body>
     <label for="language">Languages :</label>
