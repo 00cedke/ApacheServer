@@ -18,16 +18,7 @@ app.use((req, res, next) => {
     next();
 });
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('test\n');
-});
-
-server.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
-
 app.listen(port, () => {
-    //nothing idk
+    console.log(`Server running on port ${port}`);
 });
 
