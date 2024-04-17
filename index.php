@@ -1,5 +1,21 @@
 <?php
-  $GetUserIP = $_SERVER['REMOTE_ADDR'];
+
+$ip = $_SERVER['REMOTE_ADDR'];
+
+$file_name = 'log_server';
+
+$file = fopen($file_name, 'w');
+
+if ($file) {
+    fwrite($file, $ip);
+    
+    fclose($file);
+    
+    echo "true";
+} else {
+    echo "false";
+}
+
 ?>
 
 <html>
