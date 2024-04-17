@@ -8,6 +8,10 @@ const server = http.createServer((req, res) => {
   res.end(); 
 });
 
-server.listen(port, () => {
+server.listen(port, (err) => {
+  if (err) {
+    return console.log('Error -> ', err);
+  }
+  
   console.log(`the server is running now to ${port}`);
 });
